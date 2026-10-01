@@ -1,0 +1,6 @@
+{
+  "name": "TradingView - Where the world does markets",
+  "description": "Track all markets, analyze with Supercharts, and explore community trading ideas with 100M+ traders and investors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

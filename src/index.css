@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom TradingView styling */
+.get-started-gradient {
+  background: linear-gradient(135deg, #0051ff 0%, #2962ff 40%, #902bf5 100%);
+}
+
+.get-started-gradient:hover {
+  filter: brightness(1.1);
+}
+
+.space-pill-border {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(19, 23, 34, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.chart-grid-line {
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-dasharray: 2 3;
+}
+
+/* Hide scrollbars for pill nav & ticker row */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Live price flash animation */
+@keyframes flash-green {
+  0% { background-color: rgba(8, 153, 129, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(242, 54, 69, 0.35); }
+  100% { background-color: transparent; }
+}
+
+.tick-up {
+  animation: flash-green 1s ease-out;
+}
+
+.tick-down {
+  animation: flash-red 1s ease-out;
+}
